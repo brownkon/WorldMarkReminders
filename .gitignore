@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Environment variables (NEVER commit)
+.env
+
+# Database
+# data/*.db
+# data/*.db-journal
+
+# Build output
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# APNs certificates
+certs/
+
+# Playwright
+playwright-report/
+test-results/
+
+# iOS
+ios/build/
+ios/DerivedData/
+ios/*.xcworkspace/xcuserdata/
+ios/*.xcodeproj/xcuserdata/
+ios/Pods/

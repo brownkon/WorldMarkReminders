@@ -1,0 +1,46 @@
+{
+  "name": "worldmark-scheduler",
+  "version": "1.0.0",
+  "description": "WorldMark timeshare credit optimizer — finds high-demand events near resorts and recommends bookings for resale",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "seed": "ts-node -e \"const {getDatabase,initializeDatabase}=require('./src/db');const {ResortService}=require('./src/services/resort/resort.service');const db=getDatabase();initializeDatabase(db);new ResortService(db).seedResorts();\"",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "worldmark",
+    "wyndham",
+    "timeshare",
+    "scheduler"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.3",
+    "@types/uuid": "^10.0.0",
+    "axios": "^1.13.5",
+    "better-sqlite3": "^12.6.2",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "pino": "^10.3.1",
+    "pino-pretty": "^13.1.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "uuid": "^13.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "vitest": "^4.0.18"
+  }
+}
