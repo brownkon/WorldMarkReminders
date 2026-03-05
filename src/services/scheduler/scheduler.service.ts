@@ -174,7 +174,7 @@ export class SchedulerService {
      * Check stored AI events to see if booking window is open, send notifications
      */
     async runDailyBookingCheck(): Promise<PipelineRunRow> {
-        const runId = this.startPipelineRun('booking_check');
+        const runId = this.startPipelineRun('availability_check');
         let sentCount = 0;
 
         try {
