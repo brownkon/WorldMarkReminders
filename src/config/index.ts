@@ -5,9 +5,9 @@ import { z } from 'zod';
 dotenv.config();
 
 const configSchema = z.object({
-    // WorldMark Portal
-    worldmarkUsername: z.string().min(1, 'WORLDMARK_USERNAME is required'),
-    worldmarkPassword: z.string().min(1, 'WORLDMARK_PASSWORD is required'),
+    // WorldMark Portal (No longer logging in directly)
+    worldmarkUsername: z.string().optional(),
+    worldmarkPassword: z.string().optional(),
 
     // Ticketmaster
     ticketmasterApiKey: z.string().min(1, 'TICKETMASTER_API_KEY is required'),
